@@ -6,55 +6,34 @@ import heroImg from "./assets/hero.jpeg";
 // ---------------------------------------------------------------------------
 const IMAGES = {
   // Showcase / hero images
-  goldBars:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=900&q=80",
-  goldCoins:
-    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=900&q=80",
-  gemsCollection:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=900&q=80",
-  goldJewelry:
-    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=900&q=80",
-  vaultDoor:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=900&q=80",
+  goldBars: heroImg,
+  goldCoins: heroImg,
+  gemsCollection: heroImg,
+  goldJewelry: heroImg,
+  vaultDoor: heroImg,
 
   // Product images — gold coins
-  coinEagle:
-    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
-  coinMaple:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
-  coinBritannia:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
-  coinKruger:
-    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
-  coinPhilharmonic:
-    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
-  coinPanda:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
-  coinHalfEagle:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
-  coinQuarterEagle:
-    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
+  coinEagle: heroImg,
+  coinMaple: heroImg,
+  coinBritannia: heroImg,
+  coinKruger: heroImg,
+  coinPhilharmonic: heroImg,
+  coinPanda: heroImg,
+  coinHalfEagle: heroImg,
+  coinQuarterEagle: heroImg,
 
   // Product images — gold bars
-  bar10g:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
-  bar100g:
-    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
-  bar1kg:
-    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
-  bar20g:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
-  bar1oz:
-    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
+  bar10g: heroImg,
+  bar100g: heroImg,
+  bar1kg: heroImg,
+  bar20g: heroImg,
+  bar1oz: heroImg,
 
   // Product images — gems
-  ruby: "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
-  sapphire:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
-  emerald:
-    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
-  diamond:
-    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
+  ruby: heroImg,
+  sapphire: heroImg,
+  emerald: heroImg,
+  diamond: heroImg,
 };
 
 // ---------------------------------------------------------------------------
