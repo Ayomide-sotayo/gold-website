@@ -9,31 +9,31 @@ const IMAGES = {
   goldBars:
     "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=900&q=80",
   goldCoins:
-    "https://images.unsplash.com/photo-1611324736748-3952b4de1550?auto=format&fit=crop&w=900&q=80",
+    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=900&q=80",
   gemsCollection:
-    "https://images.unsplash.com/photo-1551122087-f69f8c19b6ae?auto=format&fit=crop&w=900&q=80",
+    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=900&q=80",
   goldJewelry:
-    "https://images.unsplash.com/photo-1573408301185-9519f94816b3?auto=format&fit=crop&w=900&q=80",
+    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=900&q=80",
   vaultDoor:
-    "https://images.unsplash.com/photo-1624365169364-dbf9c72a5ead?auto=format&fit=crop&w=900&q=80",
+    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=900&q=80",
 
   // Product images — gold coins
   coinEagle:
-    "https://images.unsplash.com/photo-1611324736748-3952b4de1550?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
   coinMaple:
     "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
   coinBritannia:
-    "https://images.unsplash.com/photo-1624365169364-dbf9c72a5ead?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
   coinKruger:
-    "https://images.unsplash.com/photo-1611324736748-3952b4de1550?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
   coinPhilharmonic:
-    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
   coinPanda:
-    "https://images.unsplash.com/photo-1624365169364-dbf9c72a5ead?auto=format&fit=crop&w=600&q=80",
-  coinHalfEagle:
-    "https://images.unsplash.com/photo-1611324736748-3952b4de1550?auto=format&fit=crop&w=600&q=80",
-  coinQuarterEagle:
     "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
+  coinHalfEagle:
+    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
+  coinQuarterEagle:
+    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
 
   // Product images — gold bars
   bar10g:
@@ -48,14 +48,13 @@ const IMAGES = {
     "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
 
   // Product images — gems
-  ruby:
-    "https://images.unsplash.com/photo-1551122087-f69f8c19b6ae?auto=format&fit=crop&w=600&q=80",
+  ruby: "https://images.unsplash.com/photo-1624365168968-b4d3a2372a6c?auto=format&fit=crop&w=600&q=80",
   sapphire:
-    "https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=600&q=80",
   emerald:
-    "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=600&q=80",
   diamond:
-    "https://images.unsplash.com/photo-1515562141207-5dca89f11e61?auto=format&fit=crop&w=600&q=80",
+    "https://images.unsplash.com/photo-1607863680198-23d4b2565df0?auto=format&fit=crop&w=600&q=80",
 };
 
 // ---------------------------------------------------------------------------
@@ -246,7 +245,8 @@ const PRODUCTS = [
     weight: "100 g",
     purity: "24K · .9999 fine",
     diameter: "50 × 30 mm bar",
-    certification: "Individually numbered, sealed assay card, certified assayer stamp",
+    certification:
+      "Individually numbered, sealed assay card, certified assayer stamp",
     isNew: true,
     description:
       "A refinery-fresh 100 g bar with mirror-polished faces and an individually numbered certificate. A popular mid-size format for building a position without the premium of many small coins.",
@@ -264,7 +264,8 @@ const PRODUCTS = [
     weight: "1,000 g (1 kg)",
     purity: "24K · .9999 fine",
     diameter: "116 × 51 mm bar",
-    certification: "Individually numbered, sealed assay card, certified assayer stamp",
+    certification:
+      "Individually numbered, sealed assay card, certified assayer stamp",
     isNew: true,
     description:
       "The flagship investment bar. Substantial in hand, sealed with a unique serial number, and priced closest to spot of anything in the collection.",
@@ -472,7 +473,9 @@ function Stars({ count = 5 }) {
   return (
     <div className="stars" aria-label={`${count} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <span key={i} className={i < count ? "star filled" : "star"}>★</span>
+        <span key={i} className={i < count ? "star filled" : "star"}>
+          ★
+        </span>
       ))}
     </div>
   );
@@ -492,17 +495,26 @@ export default function App() {
   const [orderRef, setOrderRef] = useState("");
   const [checkoutForm, setCheckoutForm] = useState({
     // Delivery
-    fullName: "", email: "", phone: "",
-    address: "", city: "", state: "", zip: "", country: "US",
+    fullName: "",
+    email: "",
+    phone: "",
+    address: "",
+    city: "",
+    state: "",
+    zip: "",
+    country: "US",
     // Payment
-    cardNumber: "", cardHolder: "", expiry: "", cvv: "",
+    cardNumber: "",
+    cardHolder: "",
+    expiry: "",
+    cvv: "",
   });
   const [formErrors, setFormErrors] = useState({});
   const [cardType, setCardType] = useState("");
 
   const detailProduct = useMemo(
     () => (detailId ? PRODUCTS.find((p) => p.id === detailId) : null),
-    [detailId]
+    [detailId],
   );
 
   const visible = useMemo(
@@ -510,7 +522,7 @@ export default function App() {
       activeCat === "all"
         ? PRODUCTS
         : PRODUCTS.filter((p) => p.cat === activeCat),
-    [activeCat]
+    [activeCat],
   );
 
   const latest = useMemo(() => PRODUCTS.filter((p) => p.isNew), []);
@@ -520,7 +532,7 @@ export default function App() {
       Object.entries(cart)
         .filter(([, qty]) => qty > 0)
         .map(([id, qty]) => ({ ...PRODUCTS.find((p) => p.id === id), qty })),
-    [cart]
+    [cart],
   );
 
   const cartCount = cartItems.reduce((s, i) => s + i.qty, 0);
@@ -569,7 +581,10 @@ export default function App() {
 
   const handleCheckoutChange = (field, raw) => {
     let val = raw;
-    if (field === "cardNumber") { val = fmtCardNumber(raw); setCardType(detectCardType(raw)); }
+    if (field === "cardNumber") {
+      val = fmtCardNumber(raw);
+      setCardType(detectCardType(raw));
+    }
     if (field === "expiry") val = fmtExpiry(raw);
     if (field === "cvv") val = raw.replace(/\D/g, "").slice(0, 4);
     setCheckoutForm((f) => ({ ...f, [field]: val }));
@@ -590,7 +605,12 @@ export default function App() {
     if (cardDigits.length < 13) errs.cardNumber = "Enter a valid card number";
     if (!f.cardHolder.trim()) errs.cardHolder = "Required";
     const expiryParts = f.expiry.split("/");
-    if (expiryParts.length !== 2 || expiryParts[0].length !== 2 || expiryParts[1].length !== 2) errs.expiry = "MM/YY format";
+    if (
+      expiryParts.length !== 2 ||
+      expiryParts[0].length !== 2 ||
+      expiryParts[1].length !== 2
+    )
+      errs.expiry = "MM/YY format";
     if (f.cvv.length < 3) errs.cvv = "3–4 digits";
     setFormErrors(errs);
     return Object.keys(errs).length === 0;
@@ -1459,9 +1479,22 @@ export default function App() {
 
         {/* Desktop nav */}
         <nav className="au-nav">
-          <button className={page === "home" ? "active" : ""} onClick={() => navTo("home")}>Home</button>
-          <button className={page === "shop" ? "active" : ""} onClick={() => goToShop()}>Shop</button>
-          <button className={`cart-btn ${page === "cart" || page === "checkout" ? "active" : ""}`} onClick={() => navTo("cart")}>
+          <button
+            className={page === "home" ? "active" : ""}
+            onClick={() => navTo("home")}
+          >
+            Home
+          </button>
+          <button
+            className={page === "shop" ? "active" : ""}
+            onClick={() => goToShop()}
+          >
+            Shop
+          </button>
+          <button
+            className={`cart-btn ${page === "cart" || page === "checkout" ? "active" : ""}`}
+            onClick={() => navTo("cart")}
+          >
             Cart
             {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
           </button>
@@ -1487,9 +1520,22 @@ export default function App() {
         onClick={() => setMenuOpen(false)}
       >
         <nav className="mobile-nav" onClick={(e) => e.stopPropagation()}>
-          <button className={page === "home" ? "active" : ""} onClick={() => navTo("home")}>Home</button>
-          <button className={page === "shop" ? "active" : ""} onClick={() => goToShop()}>Shop</button>
-          <button className={`mob-cart-row ${page === "cart" || page === "checkout" ? "active" : ""}`} onClick={() => navTo("cart")}>
+          <button
+            className={page === "home" ? "active" : ""}
+            onClick={() => navTo("home")}
+          >
+            Home
+          </button>
+          <button
+            className={page === "shop" ? "active" : ""}
+            onClick={() => goToShop()}
+          >
+            Shop
+          </button>
+          <button
+            className={`mob-cart-row ${page === "cart" || page === "checkout" ? "active" : ""}`}
+            onClick={() => navTo("cart")}
+          >
             Cart
             {cartCount > 0 && <span className="mob-badge">{cartCount}</span>}
           </button>
@@ -1506,15 +1552,21 @@ export default function App() {
             }}
           >
             <div className="hero-bg" />
-            <div className="eyebrow">Resey Gemstones Gold &amp; Bar Company</div>
+            <div className="eyebrow">
+              Resey Gemstones Gold &amp; Bar Company
+            </div>
             <h1>Weighed, graded, and set aside for those who look closely.</h1>
             <p>
               Sovereign coins, cast bars, and hand-selected stones — each piece
               listed with its full appraisal.
             </p>
             <div className="hero-cta">
-              <button className="primary" onClick={() => goToShop()}>Enter the Shop</button>
-              <button className="secondary" onClick={() => navTo("cart")}>View Cart</button>
+              <button className="primary" onClick={() => goToShop()}>
+                Enter the Shop
+              </button>
+              <button className="secondary" onClick={() => navTo("cart")}>
+                View Cart
+              </button>
             </div>
             <div className="hero-stats">
               <div className="hero-stat">
@@ -1557,7 +1609,11 @@ export default function App() {
               </div>
               <div className="showcase-item" onClick={() => goToShop("ruby")}>
                 <span className="showcase-tag">Rare Gems</span>
-                <img src={IMAGES.gemsCollection} alt="Gemstones" loading="lazy" />
+                <img
+                  src={IMAGES.gemsCollection}
+                  alt="Gemstones"
+                  loading="lazy"
+                />
                 <div className="showcase-overlay">
                   <h3>Precious Gemstones</h3>
                   <p>Rubies, sapphires, emeralds &amp; diamonds</p>
@@ -1573,7 +1629,9 @@ export default function App() {
                 <span className="eyebrow-sm">Fresh From The Vault</span>
                 <h2>Latest Arrivals</h2>
               </div>
-              <button className="view-all-btn" onClick={() => goToShop()}>View All</button>
+              <button className="view-all-btn" onClick={() => goToShop()}>
+                View All
+              </button>
             </div>
             <div className="latest-grid">
               {latest.map((p) => (
@@ -1584,11 +1642,42 @@ export default function App() {
                   </div>
                   <div className="body">
                     <h3 style={{ fontSize: 19, marginBottom: 8 }}>{p.name}</h3>
-                    <div className="spec" style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 11, color: "var(--muted)", marginBottom: 14 }}>{p.spec}</div>
-                    <div className="price" style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: 17, color: "var(--gold-deep)", marginBottom: 18, fontWeight: 600 }}>{money(p.price)}</div>
+                    <div
+                      className="spec"
+                      style={{
+                        fontFamily: "'IBM Plex Mono', monospace",
+                        fontSize: 11,
+                        color: "var(--muted)",
+                        marginBottom: 14,
+                      }}
+                    >
+                      {p.spec}
+                    </div>
+                    <div
+                      className="price"
+                      style={{
+                        fontFamily: "'IBM Plex Mono', monospace",
+                        fontSize: 17,
+                        color: "var(--gold-deep)",
+                        marginBottom: 18,
+                        fontWeight: 600,
+                      }}
+                    >
+                      {money(p.price)}
+                    </div>
                     <div className="card-btns">
-                      <button className="detail-btn" onClick={() => setDetailId(p.id)}>Details</button>
-                      <button className="add-btn" onClick={() => addToCart(p.id)}>Add to Cart</button>
+                      <button
+                        className="detail-btn"
+                        onClick={() => setDetailId(p.id)}
+                      >
+                        Details
+                      </button>
+                      <button
+                        className="add-btn"
+                        onClick={() => addToCart(p.id)}
+                      >
+                        Add to Cart
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1598,16 +1687,28 @@ export default function App() {
 
           {/* Showcase row 2 */}
           <div className="au-showcase" style={{ background: "var(--panel)" }}>
-            <div className="showcase-grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))" }}>
+            <div
+              className="showcase-grid"
+              style={{
+                gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
+              }}
+            >
               <div className="showcase-item" onClick={() => goToShop()}>
                 <span className="showcase-tag">Fine Jewelry</span>
-                <img src={IMAGES.goldJewelry} alt="Gold Jewelry" loading="lazy" />
+                <img
+                  src={IMAGES.goldJewelry}
+                  alt="Gold Jewelry"
+                  loading="lazy"
+                />
                 <div className="showcase-overlay">
                   <h3>Fine Jewelry</h3>
                   <p>Exquisite handcrafted luxury pieces</p>
                 </div>
               </div>
-              <div className="showcase-item" onClick={() => goToShop("diamond")}>
+              <div
+                className="showcase-item"
+                onClick={() => goToShop("diamond")}
+              >
                 <span className="showcase-tag">Diamonds</span>
                 <img src={IMAGES.vaultDoor} alt="The Vault" loading="lazy" />
                 <div className="showcase-overlay">
@@ -1624,8 +1725,8 @@ export default function App() {
               <span className="eyebrow-sm">Our Promise</span>
               <h2>Why Buy From Us</h2>
               <p className="why-subtitle">
-                Every piece is verified, documented, and shipped with full transparency —
-                from mint to your hands.
+                Every piece is verified, documented, and shipped with full
+                transparency — from mint to your hands.
               </p>
               <div className="why-grid">
                 {WHY_US.map((w, i) => (
@@ -1654,7 +1755,9 @@ export default function App() {
               <div className="test-aggregate">
                 <div className="test-agg-stars">★★★★★</div>
                 <div className="test-agg-num">5.0</div>
-                <div className="test-agg-count">/ 5.0 · 128 verified buyers</div>
+                <div className="test-agg-count">
+                  / 5.0 · 128 verified buyers
+                </div>
               </div>
               <div className="test-grid">
                 {TESTIMONIALS.map((t) => (
@@ -1689,7 +1792,10 @@ export default function App() {
           <div className="shop-head">
             <span className="eyebrow-sm">The Full Collection</span>
             <h1>Shop the Vault</h1>
-            <p>Every coin, bar, and stone we currently hold — full appraisal details on request.</p>
+            <p>
+              Every coin, bar, and stone we currently hold — full appraisal
+              details on request.
+            </p>
           </div>
           <div className="au-tabs">
             {CATEGORIES.map((c) => (
@@ -1718,8 +1824,15 @@ export default function App() {
                   <div className="spec">{p.spec}</div>
                   <div className="price">{money(p.price)}</div>
                   <div className="card-btns">
-                    <button className="detail-btn" onClick={() => setDetailId(p.id)}>Details</button>
-                    <button className="add-btn" onClick={() => addToCart(p.id)}>Add to Cart</button>
+                    <button
+                      className="detail-btn"
+                      onClick={() => setDetailId(p.id)}
+                    >
+                      Details
+                    </button>
+                    <button className="add-btn" onClick={() => addToCart(p.id)}>
+                      Add to Cart
+                    </button>
                   </div>
                 </div>
               </div>
@@ -1732,42 +1845,85 @@ export default function App() {
       {detailProduct && (
         <div className="modal-backdrop" onClick={() => setDetailId(null)}>
           <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setDetailId(null)} aria-label="Close">✕</button>
+            <button
+              className="modal-close"
+              onClick={() => setDetailId(null)}
+              aria-label="Close"
+            >
+              ✕
+            </button>
             <div className="modal-img-wrap">
               <img src={detailProduct.photo} alt={detailProduct.name} />
             </div>
             <div className="modal-body">
               <div className="modal-eyebrow">
-                {detailProduct.cat === "gold" ? "Bullion Appraisal" : "Gemstone Appraisal"}
+                {detailProduct.cat === "gold"
+                  ? "Bullion Appraisal"
+                  : "Gemstone Appraisal"}
               </div>
               <h2>{detailProduct.name}</h2>
               <p className="modal-desc">{detailProduct.description}</p>
               <div className="spec-table">
                 {detailProduct.cat === "gold" ? (
                   <>
-                    <div className="spec-row"><span>Mint</span><span>{detailProduct.mint}</span></div>
-                    <div className="spec-row"><span>Year</span><span className="mono">{detailProduct.year}</span></div>
-                    <div className="spec-row"><span>Weight</span><span className="mono">{detailProduct.weight}</span></div>
-                    <div className="spec-row"><span>Purity</span><span className="mono">{detailProduct.purity}</span></div>
-                    <div className="spec-row"><span>Dimensions</span><span className="mono">{detailProduct.diameter}</span></div>
-                    <div className="spec-row"><span>Certification</span><span>{detailProduct.certification}</span></div>
+                    <div className="spec-row">
+                      <span>Mint</span>
+                      <span>{detailProduct.mint}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Year</span>
+                      <span className="mono">{detailProduct.year}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Weight</span>
+                      <span className="mono">{detailProduct.weight}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Purity</span>
+                      <span className="mono">{detailProduct.purity}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Dimensions</span>
+                      <span className="mono">{detailProduct.diameter}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Certification</span>
+                      <span>{detailProduct.certification}</span>
+                    </div>
                   </>
                 ) : (
                   <>
-                    <div className="spec-row"><span>Origin</span><span>{detailProduct.origin}</span></div>
-                    <div className="spec-row"><span>Cut</span><span>{detailProduct.cutGrade}</span></div>
-                    <div className="spec-row"><span>Clarity</span><span>{detailProduct.clarity}</span></div>
-                    <div className="spec-row"><span>Certification</span><span>{detailProduct.certification}</span></div>
+                    <div className="spec-row">
+                      <span>Origin</span>
+                      <span>{detailProduct.origin}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Cut</span>
+                      <span>{detailProduct.cutGrade}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Clarity</span>
+                      <span>{detailProduct.clarity}</span>
+                    </div>
+                    <div className="spec-row">
+                      <span>Certification</span>
+                      <span>{detailProduct.certification}</span>
+                    </div>
                   </>
                 )}
                 <div className="spec-row">
                   <span>Price</span>
-                  <span className="mono price-hl">{money(detailProduct.price)}</span>
+                  <span className="mono price-hl">
+                    {money(detailProduct.price)}
+                  </span>
                 </div>
               </div>
               <button
                 className="checkout-btn"
-                onClick={() => { addToCart(detailProduct.id); setDetailId(null); }}
+                onClick={() => {
+                  addToCart(detailProduct.id);
+                  setDetailId(null);
+                }}
               >
                 Add to Cart
               </button>
@@ -1804,21 +1960,50 @@ export default function App() {
                       <div className="ispec">{item.spec}</div>
                     </div>
                     <div className="qty-box">
-                      <button onClick={() => setQty(item.id, item.qty - 1)}>–</button>
+                      <button onClick={() => setQty(item.id, item.qty - 1)}>
+                        –
+                      </button>
                       <span>{item.qty}</span>
-                      <button onClick={() => setQty(item.id, item.qty + 1)}>+</button>
+                      <button onClick={() => setQty(item.id, item.qty + 1)}>
+                        +
+                      </button>
                     </div>
                     <div className="lprice">{money(item.qty * item.price)}</div>
-                    <button className="remove-btn" onClick={() => removeItem(item.id)} aria-label="Remove item">✕</button>
+                    <button
+                      className="remove-btn"
+                      onClick={() => removeItem(item.id)}
+                      aria-label="Remove item"
+                    >
+                      ✕
+                    </button>
                   </div>
                 ))}
               </div>
               <div className="summary">
-                <div className="sum-row"><span>Subtotal</span><span>{money(subtotal)}</span></div>
-                <div className="sum-row"><span>Insured escrow (1.5%)</span><span>{money(escrow)}</span></div>
-                <div className="sum-row total"><span>Total</span><span>{money(total)}</span></div>
-                <button className="checkout-btn" onClick={() => { navTo("checkout"); setCheckoutStep("form"); }}>Proceed to Checkout</button>
-                <div className="note">Prices are indicative and subject to daily spot rates.</div>
+                <div className="sum-row">
+                  <span>Subtotal</span>
+                  <span>{money(subtotal)}</span>
+                </div>
+                <div className="sum-row">
+                  <span>Insured escrow (1.5%)</span>
+                  <span>{money(escrow)}</span>
+                </div>
+                <div className="sum-row total">
+                  <span>Total</span>
+                  <span>{money(total)}</span>
+                </div>
+                <button
+                  className="checkout-btn"
+                  onClick={() => {
+                    navTo("checkout");
+                    setCheckoutStep("form");
+                  }}
+                >
+                  Proceed to Checkout
+                </button>
+                <div className="note">
+                  Prices are indicative and subject to daily spot rates.
+                </div>
               </div>
             </>
           )}
@@ -1829,82 +2014,147 @@ export default function App() {
       {page === "checkout" && checkoutStep === "form" && (
         <div className="co-wrap">
           <h1>Checkout</h1>
-          <div className="co-sub">Complete your delivery and payment details to confirm your order.</div>
+          <div className="co-sub">
+            Complete your delivery and payment details to confirm your order.
+          </div>
           <div className="co-layout">
             {/* Left — forms */}
             <div>
               {/* Delivery Section */}
               <div className="co-section">
-                <h2><span className="co-num">1</span> Delivery Details</h2>
+                <h2>
+                  <span className="co-num">1</span> Delivery Details
+                </h2>
                 <div className="co-row">
                   <div className="co-field">
                     <label>Full Name</label>
-                    <input id="co-fullName" type="text" placeholder="John Doe"
+                    <input
+                      id="co-fullName"
+                      type="text"
+                      placeholder="John Doe"
                       className={formErrors.fullName ? "err" : ""}
                       value={checkoutForm.fullName}
-                      onChange={(e) => handleCheckoutChange("fullName", e.target.value)} />
-                    {formErrors.fullName && <span className="err-msg">{formErrors.fullName}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("fullName", e.target.value)
+                      }
+                    />
+                    {formErrors.fullName && (
+                      <span className="err-msg">{formErrors.fullName}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row cols2">
                   <div className="co-field">
                     <label>Email Address</label>
-                    <input id="co-email" type="email" placeholder="john@example.com"
+                    <input
+                      id="co-email"
+                      type="email"
+                      placeholder="john@example.com"
                       className={formErrors.email ? "err" : ""}
                       value={checkoutForm.email}
-                      onChange={(e) => handleCheckoutChange("email", e.target.value)} />
-                    {formErrors.email && <span className="err-msg">{formErrors.email}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("email", e.target.value)
+                      }
+                    />
+                    {formErrors.email && (
+                      <span className="err-msg">{formErrors.email}</span>
+                    )}
                   </div>
                   <div className="co-field">
                     <label>Phone Number</label>
-                    <input id="co-phone" type="tel" placeholder="+1 (555) 000-0000"
+                    <input
+                      id="co-phone"
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
                       className={formErrors.phone ? "err" : ""}
                       value={checkoutForm.phone}
-                      onChange={(e) => handleCheckoutChange("phone", e.target.value)} />
-                    {formErrors.phone && <span className="err-msg">{formErrors.phone}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("phone", e.target.value)
+                      }
+                    />
+                    {formErrors.phone && (
+                      <span className="err-msg">{formErrors.phone}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row">
                   <div className="co-field">
                     <label>Street Address</label>
-                    <input id="co-address" type="text" placeholder="123 Main Street, Apt 4B"
+                    <input
+                      id="co-address"
+                      type="text"
+                      placeholder="123 Main Street, Apt 4B"
                       className={formErrors.address ? "err" : ""}
                       value={checkoutForm.address}
-                      onChange={(e) => handleCheckoutChange("address", e.target.value)} />
-                    {formErrors.address && <span className="err-msg">{formErrors.address}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("address", e.target.value)
+                      }
+                    />
+                    {formErrors.address && (
+                      <span className="err-msg">{formErrors.address}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row cols3">
                   <div className="co-field">
                     <label>City</label>
-                    <input id="co-city" type="text" placeholder="New York"
+                    <input
+                      id="co-city"
+                      type="text"
+                      placeholder="New York"
                       className={formErrors.city ? "err" : ""}
                       value={checkoutForm.city}
-                      onChange={(e) => handleCheckoutChange("city", e.target.value)} />
-                    {formErrors.city && <span className="err-msg">{formErrors.city}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("city", e.target.value)
+                      }
+                    />
+                    {formErrors.city && (
+                      <span className="err-msg">{formErrors.city}</span>
+                    )}
                   </div>
                   <div className="co-field">
                     <label>State / Province</label>
-                    <input id="co-state" type="text" placeholder="NY"
+                    <input
+                      id="co-state"
+                      type="text"
+                      placeholder="NY"
                       className={formErrors.state ? "err" : ""}
                       value={checkoutForm.state}
-                      onChange={(e) => handleCheckoutChange("state", e.target.value)} />
-                    {formErrors.state && <span className="err-msg">{formErrors.state}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("state", e.target.value)
+                      }
+                    />
+                    {formErrors.state && (
+                      <span className="err-msg">{formErrors.state}</span>
+                    )}
                   </div>
                   <div className="co-field">
                     <label>ZIP / Postal Code</label>
-                    <input id="co-zip" type="text" placeholder="10001"
+                    <input
+                      id="co-zip"
+                      type="text"
+                      placeholder="10001"
                       className={formErrors.zip ? "err" : ""}
                       value={checkoutForm.zip}
-                      onChange={(e) => handleCheckoutChange("zip", e.target.value)} />
-                    {formErrors.zip && <span className="err-msg">{formErrors.zip}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("zip", e.target.value)
+                      }
+                    />
+                    {formErrors.zip && (
+                      <span className="err-msg">{formErrors.zip}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row">
                   <div className="co-field">
                     <label>Country</label>
-                    <select id="co-country" value={checkoutForm.country}
-                      onChange={(e) => handleCheckoutChange("country", e.target.value)}>
+                    <select
+                      id="co-country"
+                      value={checkoutForm.country}
+                      onChange={(e) =>
+                        handleCheckoutChange("country", e.target.value)
+                      }
+                    >
                       <option value="US">United States</option>
                       <option value="CA">Canada</option>
                       <option value="GB">United Kingdom</option>
@@ -1923,52 +2173,104 @@ export default function App() {
 
               {/* Payment Section */}
               <div className="co-section">
-                <h2><span className="co-num">2</span> Payment Information</h2>
-                <div className="co-row co-card-row" style={{ position: "relative" }}>
+                <h2>
+                  <span className="co-num">2</span> Payment Information
+                </h2>
+                <div
+                  className="co-row co-card-row"
+                  style={{ position: "relative" }}
+                >
                   <div className="co-field" style={{ position: "relative" }}>
                     <label>Card Number</label>
-                    <input id="co-cardNumber" type="text" placeholder="1234 5678 9012 3456"
-                      inputMode="numeric" maxLength={19}
+                    <input
+                      id="co-cardNumber"
+                      type="text"
+                      placeholder="1234 5678 9012 3456"
+                      inputMode="numeric"
+                      maxLength={19}
                       className={formErrors.cardNumber ? "err" : ""}
                       value={checkoutForm.cardNumber}
                       style={{ paddingRight: 60 }}
-                      onChange={(e) => handleCheckoutChange("cardNumber", e.target.value)} />
-                    {cardType && <span className="co-card-type">{cardType}</span>}
-                    {formErrors.cardNumber && <span className="err-msg">{formErrors.cardNumber}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("cardNumber", e.target.value)
+                      }
+                    />
+                    {cardType && (
+                      <span className="co-card-type">{cardType}</span>
+                    )}
+                    {formErrors.cardNumber && (
+                      <span className="err-msg">{formErrors.cardNumber}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row">
                   <div className="co-field">
                     <label>Cardholder Name</label>
-                    <input id="co-cardHolder" type="text" placeholder="Name as it appears on card"
+                    <input
+                      id="co-cardHolder"
+                      type="text"
+                      placeholder="Name as it appears on card"
                       className={formErrors.cardHolder ? "err" : ""}
                       value={checkoutForm.cardHolder}
-                      onChange={(e) => handleCheckoutChange("cardHolder", e.target.value)} />
-                    {formErrors.cardHolder && <span className="err-msg">{formErrors.cardHolder}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("cardHolder", e.target.value)
+                      }
+                    />
+                    {formErrors.cardHolder && (
+                      <span className="err-msg">{formErrors.cardHolder}</span>
+                    )}
                   </div>
                 </div>
                 <div className="co-row cols2">
                   <div className="co-field">
                     <label>Expiry Date</label>
-                    <input id="co-expiry" type="text" placeholder="MM/YY"
+                    <input
+                      id="co-expiry"
+                      type="text"
+                      placeholder="MM/YY"
                       maxLength={5}
                       className={formErrors.expiry ? "err" : ""}
                       value={checkoutForm.expiry}
-                      onChange={(e) => handleCheckoutChange("expiry", e.target.value)} />
-                    {formErrors.expiry && <span className="err-msg">{formErrors.expiry}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("expiry", e.target.value)
+                      }
+                    />
+                    {formErrors.expiry && (
+                      <span className="err-msg">{formErrors.expiry}</span>
+                    )}
                   </div>
                   <div className="co-field">
                     <label>CVV / CVC</label>
-                    <input id="co-cvv" type="password" placeholder="•••"
-                      maxLength={4} inputMode="numeric"
+                    <input
+                      id="co-cvv"
+                      type="password"
+                      placeholder="•••"
+                      maxLength={4}
+                      inputMode="numeric"
                       className={formErrors.cvv ? "err" : ""}
                       value={checkoutForm.cvv}
-                      onChange={(e) => handleCheckoutChange("cvv", e.target.value)} />
-                    {formErrors.cvv && <span className="err-msg">{formErrors.cvv}</span>}
+                      onChange={(e) =>
+                        handleCheckoutChange("cvv", e.target.value)
+                      }
+                    />
+                    {formErrors.cvv && (
+                      <span className="err-msg">{formErrors.cvv}</span>
+                    )}
                   </div>
                 </div>
-                <div style={{ marginTop: 8, fontFamily: "'IBM Plex Mono', monospace", fontSize: 10.5, color: "var(--muted)", display: "flex", alignItems: "center", gap: 6 }}>
-                  🔒 Your card details are used for simulation only and are never stored or transmitted.
+                <div
+                  style={{
+                    marginTop: 8,
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: 10.5,
+                    color: "var(--muted)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                  }}
+                >
+                  🔒 Your card details are used for simulation only and are
+                  never stored or transmitted.
                 </div>
               </div>
             </div>
@@ -1980,24 +2282,46 @@ export default function App() {
                 <div className="co-s-items">
                   {cartItems.map((item) => (
                     <div className="co-s-item" key={item.id}>
-                      <img className="co-s-img" src={item.photo} alt={item.name} loading="lazy" />
+                      <img
+                        className="co-s-img"
+                        src={item.photo}
+                        alt={item.name}
+                        loading="lazy"
+                      />
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div className="co-s-name">{item.name}</div>
                         <div className="co-s-qty">Qty: {item.qty}</div>
                       </div>
-                      <div className="co-s-price">{money(item.qty * item.price)}</div>
+                      <div className="co-s-price">
+                        {money(item.qty * item.price)}
+                      </div>
                     </div>
                   ))}
                 </div>
                 <div className="co-totals">
-                  <div className="co-tot-row"><span>Subtotal</span><span>{money(subtotal)}</span></div>
-                  <div className="co-tot-row"><span>Insured escrow (1.5%)</span><span>{money(escrow)}</span></div>
-                  <div className="co-tot-row grand"><span>Total</span><span>{money(total)}</span></div>
+                  <div className="co-tot-row">
+                    <span>Subtotal</span>
+                    <span>{money(subtotal)}</span>
+                  </div>
+                  <div className="co-tot-row">
+                    <span>Insured escrow (1.5%)</span>
+                    <span>{money(escrow)}</span>
+                  </div>
+                  <div className="co-tot-row grand">
+                    <span>Total</span>
+                    <span>{money(total)}</span>
+                  </div>
                 </div>
-                <button id="co-pay-btn" className="co-pay-btn" onClick={submitCheckout}>
+                <button
+                  id="co-pay-btn"
+                  className="co-pay-btn"
+                  onClick={submitCheckout}
+                >
                   ◆ Confirm &amp; Pay {money(total)}
                 </button>
-                <div className="co-secure-note">🔒 SSL encrypted · Simulated payment</div>
+                <div className="co-secure-note">
+                  🔒 SSL encrypted · Simulated payment
+                </div>
               </div>
             </div>
           </div>
@@ -2010,29 +2334,60 @@ export default function App() {
           <div className="success-icon">✓</div>
           <h1>Order Confirmed!</h1>
           <p className="success-sub">
-            Thank you for your order. Your purchase has been received and is now being processed.
-            A confirmation will be sent to <strong>{checkoutForm.email}</strong>.
+            Thank you for your order. Your purchase has been received and is now
+            being processed. A confirmation will be sent to{" "}
+            <strong>{checkoutForm.email}</strong>.
           </p>
           <div className="success-ref">Order Reference: {orderRef}</div>
           <div className="success-actions">
-            <button className="s-primary" onClick={() => { navTo("shop"); setCheckoutStep("idle"); setCheckoutForm({ fullName:"", email:"", phone:"", address:"", city:"", state:"", zip:"", country:"US", cardNumber:"", cardHolder:"", expiry:"", cvv:"" }); }}>Continue Shopping</button>
-            <button className="s-sec" onClick={() => navTo("home")}>Back to Home</button>
+            <button
+              className="s-primary"
+              onClick={() => {
+                navTo("shop");
+                setCheckoutStep("idle");
+                setCheckoutForm({
+                  fullName: "",
+                  email: "",
+                  phone: "",
+                  address: "",
+                  city: "",
+                  state: "",
+                  zip: "",
+                  country: "US",
+                  cardNumber: "",
+                  cardHolder: "",
+                  expiry: "",
+                  cvv: "",
+                });
+              }}
+            >
+              Continue Shopping
+            </button>
+            <button className="s-sec" onClick={() => navTo("home")}>
+              Back to Home
+            </button>
           </div>
           <div className="success-steps">
             <div className="success-step">
               <div className="step-icon">📦</div>
               <div className="step-label">Processing</div>
-              <div className="step-desc">Your order is being verified and prepared</div>
+              <div className="step-desc">
+                Your order is being verified and prepared
+              </div>
             </div>
             <div className="success-step">
               <div className="step-icon">🔐</div>
               <div className="step-label">Secured</div>
-              <div className="step-desc">Items are being sealed and insured for transit</div>
+              <div className="step-desc">
+                Items are being sealed and insured for transit
+              </div>
             </div>
             <div className="success-step">
               <div className="step-icon">🚚</div>
               <div className="step-label">Dispatched</div>
-              <div className="step-desc">Fully insured delivery to your address</div>
+              <div className="step-desc">
+                Fully insured delivery to your address
+              </div>
             </div>
           </div>
         </div>
@@ -2045,23 +2400,30 @@ export default function App() {
             <div className="name">◆ Resey Gemstones Gold &amp; Bar Co.</div>
             <p>
               Bullion coins, cast bars, and hand-graded gemstones, sourced
-              direct from accredited mints and refiners and shipped fully insured.
+              direct from accredited mints and refiners and shipped fully
+              insured.
             </p>
           </div>
           <div className="footer-col">
             <h4>Shop</h4>
             <button onClick={() => goToShop()}>All Products</button>
-            <button onClick={() => goToShop("gold")}>Gold Coins &amp; Bars</button>
+            <button onClick={() => goToShop("gold")}>
+              Gold Coins &amp; Bars
+            </button>
             <button onClick={() => navTo("cart")}>Your Cart</button>
           </div>
           <div className="footer-col">
             <h4>Contact</h4>
             <a href="tel:+16018040308">+1 (601) 804-0308</a>
-            <a href="mailto:Reseygenstone.@outlook.com">Reseygenstone.@outlook.com</a>
+            <a href="mailto:Reseygenstone.@outlook.com">
+              Reseygenstone.@outlook.com
+            </a>
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} Resey Gemstones Gold &amp; Bar Company</span>
+          <span>
+            © {new Date().getFullYear()} Resey Gemstones Gold &amp; Bar Company
+          </span>
           <span>Demo storefront — no real transactions are processed.</span>
         </div>
       </footer>
