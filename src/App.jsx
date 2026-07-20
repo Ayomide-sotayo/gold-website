@@ -1,39 +1,65 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useEffect } from "react";
+import { ShieldCheck, Building2, Shield, TrendingUp, Info } from "lucide-react";
 import heroImg from "./assets/hero.jpeg";
+import goldBarShowcase from "./assets/gold_bar_showcase.jfif";
+import goldCoinShowcase from "./assets/gold_coin.jfif";
+import gemsCollectionShowcase from "./assets/gold_collection_showcase.jfif";
+import goldJewelryShowcase from "./assets/gold jewelry.jfif";
+import vaultDoorImg from "./assets/vault_door.jfif";
+
+import coinEagle from "./assets/soverieng_eagle.jfif";
+import coinMaple from "./assets/maple_leaf.jfif";
+import coinBritannia from "./assets/britinia_coin.jfif";
+import coinKruger from "./assets/krugerrand_coin.jfif";
+import coinPhilharmonic from "./assets/philharmonic_coin.jfif";
+import coinPanda from "./assets/panda_coin.jfif";
+import coinHalfEagle from "./assets/half_ounce_eagle.jfif";
+import coinQuarterEagle from "./assets/quater_ounce_eagle.jfif";
+
+import bar10g from "./assets/cast_ingot.jfif";
+import bar100g from "./assets/suisse_100g.png";
+import bar1kg from "./assets/sussie_1kilo.jfif";
+import bar20g from "./assets/suisse_20g_pair.png";
+import bar1oz from "./assets/cast_ingot_1oz.png";
+
+import ruby from "./assets/pigon_blood_ruby.jfif";
+import sapphire from "./assets/kashmir_sapphire.jfif";
+import emerald from "./assets/muzoemerald.jfif";
+import diamond from "./assets/oldminediamond.jfif";
 
 // ---------------------------------------------------------------------------
-// Image URLs — all sourced from Unsplash
+// Image URLs — all sourced from local assets
 // ---------------------------------------------------------------------------
 const IMAGES = {
   // Showcase / hero images
-  goldBars: heroImg,
-  goldCoins: heroImg,
-  gemsCollection: heroImg,
-  goldJewelry: heroImg,
-  vaultDoor: heroImg,
+  goldBars: goldBarShowcase,
+  goldCoins: goldCoinShowcase,
+  gemsCollection: gemsCollectionShowcase,
+  goldJewelry: goldJewelryShowcase,
+  vaultDoor: vaultDoorImg,
 
   // Product images — gold coins
-  coinEagle: heroImg,
-  coinMaple: heroImg,
-  coinBritannia: heroImg,
-  coinKruger: heroImg,
-  coinPhilharmonic: heroImg,
-  coinPanda: heroImg,
-  coinHalfEagle: heroImg,
-  coinQuarterEagle: heroImg,
+  coinEagle: coinEagle,
+  coinMaple: coinMaple,
+  coinBritannia: coinBritannia,
+  coinKruger: coinKruger,
+  coinPhilharmonic: coinPhilharmonic,
+  coinPanda: coinPanda,
+  coinHalfEagle: coinHalfEagle,
+  coinQuarterEagle: coinQuarterEagle,
 
   // Product images — gold bars
-  bar10g: heroImg,
-  bar100g: heroImg,
-  bar1kg: heroImg,
-  bar20g: heroImg,
-  bar1oz: heroImg,
+  bar10g: bar10g,
+  bar100g: bar100g,
+  bar1kg: bar1kg,
+  bar20g: bar20g,
+  bar1oz: bar1oz,
 
   // Product images — gems
-  ruby: heroImg,
-  sapphire: heroImg,
-  emerald: heroImg,
-  diamond: heroImg,
+  ruby: ruby,
+  sapphire: sapphire,
+  emerald: emerald,
+  diamond: diamond,
 };
 
 // ---------------------------------------------------------------------------
@@ -340,28 +366,28 @@ const CATEGORIES = [
 
 const WHY_US = [
   {
-    icon: "🔬",
+    icon: <ShieldCheck size={32} strokeWidth={1.5} color="#A9793B" />,
     title: "Certified Purity",
     body: "Every coin and bar ships sealed with an assay card or grading report confirming exact weight and fineness.",
     stat: "100%",
     statLabel: "Verified",
   },
   {
-    icon: "🏛️",
+    icon: <Building2 size={32} strokeWidth={1.5} color="#A9793B" />,
     title: "Sourced Direct",
     body: "We buy straight from accredited mints and refiners — no unnecessary hands in between.",
     stat: "12+",
     statLabel: "Partner Mints",
   },
   {
-    icon: "🛡️",
+    icon: <Shield size={32} strokeWidth={1.5} color="#A9793B" />,
     title: "Insured Delivery",
     body: "Every order is fully insured in transit, tracked door to door until it's in your hands.",
     stat: "$0",
     statLabel: "Lost In Transit",
   },
   {
-    icon: "📊",
+    icon: <TrendingUp size={32} strokeWidth={1.5} color="#A9793B" />,
     title: "Transparent Pricing",
     body: "Prices track daily spot rates with our margin shown up front — never buried in the total.",
     stat: "Live",
@@ -418,6 +444,102 @@ const money = (n) =>
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
   });
+
+// ---------------------------------------------------------------------------
+// Market Spot Ticker
+// ---------------------------------------------------------------------------
+const BASE_PRICES = {
+  gold: 2451.3,
+  silver: 29.42,
+  platinum: 987.1,
+  palladium: 1043.5,
+};
+
+function SpotTicker() {
+  const [prices, setPrices] = useState(BASE_PRICES);
+  const [dirs, setDirs] = useState({
+    gold: 1,
+    silver: 1,
+    platinum: -1,
+    palladium: 1,
+  });
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setPrices((prev) => {
+        const next = {};
+        const nextDirs = {};
+        Object.keys(prev).forEach((k) => {
+          const delta = (Math.random() - 0.5) * 2;
+          next[k] = +(prev[k] + delta).toFixed(2);
+          nextDirs[k] = delta >= 0 ? 1 : -1;
+        });
+        setDirs(nextDirs);
+        return next;
+      });
+    }, 3500);
+    return () => clearInterval(id);
+  }, []);
+
+  const fmt = (n) =>
+    n.toLocaleString("en-US", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+
+  const metals = [
+    { key: "gold", label: "Gold (XAU)" },
+    { key: "silver", label: "Silver (XAG)" },
+    { key: "platinum", label: "Platinum (XPT)" },
+    { key: "palladium", label: "Palladium (XPD)" },
+  ];
+
+  return (
+    <div className="spot-ticker">
+      <span className="ticker-label">LIVE SPOT PRICES</span>
+      <div className="ticker-sep" />
+      {metals.map(({ key, label }) => (
+        <span key={key} className="ticker-item">
+          <span className="ticker-metal">{label}</span>
+          <span className={`ticker-price ${dirs[key] > 0 ? "up" : "down"}`}>
+            ${fmt(prices[key])}/oz
+            <span className="ticker-arrow">{dirs[key] > 0 ? " ▲" : " ▼"}</span>
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Market Insights Data
+// ---------------------------------------------------------------------------
+const MARKET_INSIGHTS = [
+  {
+    title: "Store of Value",
+    body: "Gold has maintained purchasing power for over 5,000 years. Unlike fiat currencies, no government can debase a finite physical asset.",
+    stat: "5,000+",
+    statUnit: "years of use",
+  },
+  {
+    title: "Inflation Hedge",
+    body: "During periods of high inflation, gold historically outperforms equities and bonds, preserving real wealth when paper assets erode.",
+    stat: "+15%",
+    statUnit: "avg. in inflationary years",
+  },
+  {
+    title: "Portfolio Diversification",
+    body: "Gold carries a near-zero correlation to equities. Even a 5–10% allocation has been shown to reduce portfolio volatility significantly.",
+    stat: "-0.04",
+    statUnit: "correlation to S&P 500",
+  },
+  {
+    title: "Global Liquidity",
+    body: "Physical gold is the only universally accepted monetary asset. It can be liquidated in any major city worldwide, at any time.",
+    stat: "$220B",
+    statUnit: "daily trading volume",
+  },
+];
 
 // ---------------------------------------------------------------------------
 // Product image component
@@ -606,22 +728,28 @@ export default function App() {
   return (
     <div className="aureum">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-        html, body { margin: 0; padding: 0; width: 100%; }
+        html, body { margin: 0; padding: 0; width: 100%; scroll-behavior: smooth; }
         #root, #app { width: 100%; }
 
         .aureum {
-          --bg: #FAF6ED;
+          --bg: #F9F5EE;
           --bg-2: #FFFFFF;
-          --panel: #F3EDE0;
-          --gold: #A9793B;
+          --panel: #F2EBD9;
+          --glass: rgba(255,255,255,0.65);
+          --glass-border: rgba(169,121,59,0.18);
+          --gold: #B8842A;
           --gold-deep: #8C6329;
           --gold-light: #D4A853;
-          --ink: #33291C;
-          --hairline: rgba(51, 41, 28, 0.12);
-          --muted: #8A7C68;
-          font-family: 'Jost', sans-serif;
+          --gold-glow: rgba(184,132,42,0.18);
+          --ink: #1C1509;
+          --ink-80: rgba(28,21,9,0.80);
+          --hairline: rgba(28,21,9,0.10);
+          --muted: #7A6E5E;
+          --up: #1A7A4A;
+          --down: #B03030;
+          font-family: 'Inter', sans-serif;
           background: var(--bg);
           color: var(--ink);
           min-height: 100vh;
@@ -637,18 +765,48 @@ export default function App() {
         }
         .mono { font-family: 'IBM Plex Mono', monospace; }
 
+        /* ── SPOT TICKER ──────────────────────────────────────── */
+        .spot-ticker {
+          display: flex; align-items: center; gap: 28px;
+          padding: 10px 5vw;
+          background: var(--ink);
+          overflow-x: auto; white-space: nowrap;
+          scrollbar-width: none;
+        }
+        .spot-ticker::-webkit-scrollbar { display: none; }
+        .ticker-label {
+          font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+          letter-spacing: 0.22em; text-transform: uppercase;
+          color: var(--gold-light); font-weight: 500; flex-shrink: 0;
+        }
+        .ticker-sep {
+          width: 1px; height: 14px; background: rgba(255,255,255,0.15); flex-shrink: 0;
+        }
+        .ticker-item { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+        .ticker-metal {
+          font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+          color: rgba(255,255,255,0.5); letter-spacing: 0.04em;
+        }
+        .ticker-price {
+          font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
+          font-weight: 500; transition: color 0.4s;
+        }
+        .ticker-price.up { color: #4ECA84; }
+        .ticker-price.down { color: #F07070; }
+        .ticker-arrow { font-size: 8px; }
+
         /* ── HEADER / NAV ─────────────────────────────────────── */
         .au-header {
           display: flex; align-items: center; justify-content: space-between;
-          padding: 22px 5vw;
-          border-bottom: 1px solid var(--hairline);
-          background: rgba(255,255,255,0.95);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
+          padding: 18px 5vw;
+          border-bottom: 1px solid var(--glass-border);
+          background: var(--glass);
+          backdrop-filter: blur(18px) saturate(1.8);
+          -webkit-backdrop-filter: blur(18px) saturate(1.8);
           position: sticky; top: 0; z-index: 100;
           transition: box-shadow 0.3s;
+          box-shadow: 0 1px 0 var(--glass-border), 0 4px 20px rgba(28,21,9,0.04);
         }
-        .au-header:hover { box-shadow: 0 4px 24px rgba(51,41,28,0.08); }
         .au-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; text-decoration: none; }
         .au-logo .mark {
           color: var(--gold); font-size: 22px;
@@ -959,29 +1117,78 @@ export default function App() {
           font-family: 'Cormorant Garamond', serif; font-size: 60px;
           color: var(--gold); opacity: 0.5;
         }
-        .card-body { padding: 24px 22px 26px; display: flex; flex-direction: column; flex: 1; }
-        .au-card h3 { font-size: 19px; margin-bottom: 8px; color: var(--ink); font-weight: 700; }
+        .card-body { padding: 22px 20px 24px; display: flex; flex-direction: column; flex: 1; }
+        .au-card h3 { font-size: 18px; margin-bottom: 6px; color: var(--ink); font-weight: 600; letter-spacing: 0.01em; }
         .au-card .spec {
-          font-family: 'IBM Plex Mono', monospace; font-size: 11px;
-          color: var(--muted); margin-bottom: 16px; letter-spacing: 0.02em;
+          font-family: 'IBM Plex Mono', monospace; font-size: 10.5px;
+          color: var(--muted); margin-bottom: 14px; letter-spacing: 0.02em;
         }
         .au-card .price {
-          font-family: 'IBM Plex Mono', monospace; font-size: 17px;
+          font-family: 'IBM Plex Mono', monospace; font-size: 16px;
           color: var(--gold-deep); margin-bottom: 18px; font-weight: 600;
         }
-        .card-btns { display: flex; gap: 10px; margin-top: auto; }
+        .card-btns { display: flex; gap: 8px; margin-top: auto; }
         .add-btn, .detail-btn {
-          padding: 12px 0; background: transparent; border: 1.5px solid var(--gold);
-          color: var(--gold-deep); font-family: 'Jost', sans-serif; font-size: 12px;
-          letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-          transition: all 0.3s; font-weight: 600; border-radius: 4px;
+          padding: 11px 0; background: transparent; border: 1.5px solid var(--gold);
+          color: var(--gold-deep); font-family: 'Inter', sans-serif; font-size: 11.5px;
+          letter-spacing: 0.09em; text-transform: uppercase; cursor: pointer;
+          transition: all 0.28s; font-weight: 600; border-radius: 6px;
         }
         .add-btn { flex: 1.4; }
         .detail-btn { flex: 1; border-color: var(--hairline); color: var(--muted); }
-        .add-btn:hover { background: var(--gold); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 16px rgba(169,121,59,0.3); }
+        .add-btn:hover { background: var(--gold); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 18px var(--gold-glow); }
         .detail-btn:hover { border-color: var(--gold); color: var(--gold-deep); }
 
-        /* ── OUR PROMISE ──────────────────────────────────────── */
+        /* ── MARKET INSIGHTS ────────────────────────────────── */
+        .au-insights {
+          padding: 7vw 5vw; border-bottom: 1px solid var(--hairline);
+          background: linear-gradient(160deg, #f6f0e4 0%, #faf5ee 60%, #f3ead8 100%);
+        }
+        .insights-inner { max-width: 1400px; margin: 0 auto; }
+        .insights-inner .eyebrow-sm { display: block; text-align: center; margin-bottom: 12px; }
+        .insights-inner h2 {
+          font-size: clamp(28px, 4vw, 44px); text-align: center;
+          color: var(--ink); margin-bottom: 14px; font-weight: 700;
+        }
+        .insights-subtitle {
+          text-align: center; color: var(--muted); font-size: 15px;
+          max-width: 520px; margin: 0 auto 56px; line-height: 1.75;
+        }
+        .insights-grid {
+          display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 20px;
+        }
+        .insight-card {
+          background: var(--glass);
+          border: 1px solid var(--glass-border);
+          border-radius: 14px; padding: 32px 28px;
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          transition: box-shadow 0.35s, transform 0.35s;
+          box-shadow: 0 2px 12px rgba(28,21,9,0.05);
+        }
+        .insight-card:hover {
+          box-shadow: 0 14px 40px rgba(184,132,42,0.14);
+          transform: translateY(-5px);
+          border-color: rgba(184,132,42,0.35);
+        }
+        .insight-stat {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 38px; font-weight: 700;
+          color: var(--gold-deep); line-height: 1; margin-bottom: 2px;
+        }
+        .insight-stat-unit {
+          font-family: 'IBM Plex Mono', monospace; font-size: 9.5px;
+          letter-spacing: 0.12em; text-transform: uppercase;
+          color: var(--gold); margin-bottom: 18px; display: block;
+        }
+        .insight-card h3 {
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 20px; font-weight: 700; color: var(--ink); margin-bottom: 10px;
+        }
+        .insight-card p { font-size: 13.5px; color: var(--muted); line-height: 1.75; margin: 0; }
+
+        /* ── OUR PROMISE ────────────────────────────────────── */
         .au-why {
           padding: 8vw 5vw; position: relative; overflow: hidden;
           background: linear-gradient(145deg, #2B2016 0%, #3D2E18 40%, #2B2016 100%);
@@ -1449,6 +1656,7 @@ export default function App() {
         }
       `}</style>
 
+      <SpotTicker />
       {/* ── HEADER ──────────────────────────────────────────────── */}
       <header className="au-header">
         <div className="au-logo" onClick={() => navTo("home")}>
@@ -1694,6 +1902,28 @@ export default function App() {
                   <h3>The Collection</h3>
                   <p>Hand-selected stones from the world's finest sources</p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ── MARKET INSIGHTS ─────────────────────────────────── */}
+          <div className="au-insights">
+            <div className="insights-inner">
+              <span className="eyebrow-sm">The Investment Case</span>
+              <h2>Why Physical Gold?</h2>
+              <p className="insights-subtitle">
+                For millennia, gold has been the world's reserve asset. Here is
+                what the data says about holding physical bullion today.
+              </p>
+              <div className="insights-grid">
+                {MARKET_INSIGHTS.map((m) => (
+                  <div className="insight-card" key={m.title}>
+                    <div className="insight-stat">{m.stat}</div>
+                    <span className="insight-stat-unit">{m.statUnit}</span>
+                    <h3>{m.title}</h3>
+                    <p>{m.body}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
